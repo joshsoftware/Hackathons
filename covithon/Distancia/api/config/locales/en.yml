@@ -1,0 +1,77 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at https://guides.rubyonrails.org/i18n.html.
+
+en:
+  create:
+    success: "%{model_name} created successfully"
+    failure: "Unable to create %{model_name}"
+  welcome_message: "Welcome to *SmartTok* 🛍 🥳 \nWhat would you like to buy or book today?\nAvailable Services:\n%{shop_types}\n\nSimply reply *<Pincode> <Service Code>*\nExample: 411050 MED\n\nFor Home Delivery:\n*<pin code> <Service Code> HD*\n\nहिंदी में भाषा बदलने के लिए: LANG HINDI भेजे."
+  pin_and_shop_type_error: "Whoa! It is not a valid input, let's try again.. 😅\n\n%{shop_types}\n\nSimply reply <Pincode> <Service Code>.\nExample: 411030 GRC"
+  pin_code_error: "Oops! Seems like an invalid Pincode.\nPlease try again with valid 6 digit pin code.\n<Pincode> <Service Code>"
+  shop_type_error: "Uh-oh! Seems like an invalid Service Code.\nPlease try again with available Services:\n\n%{shop_types}\n\nExample: 411030 LIQ"
+  shops_near_you: "Here's the list of shops near you,\n" #Not in use
+  select_shop_code: "Please select %{type} & send its code.\n"
+  no_shops_message: "Oops! Could not locate any %{type} for the given pincode! 😅\nPlease try with other nearby Pincode in the same format."
+  shop_code_error: "Uh-oh! Seems like an invalid %{type} Code. Please try again."
+  shop_config_error: "Uh-oh! It's quite unfortunate that currently there's no Slots available for selected %{type}! 😅\nPlease try again with other %{type} Code.\nOR simply reply: *MENU* to go back onto the Main Menu."
+  #shop_pin_error: "Oops! Selected shop doesn't belongs to the Pincode or Shop Type you've entered! 😅\nPlease try other shop from the list.\nOR reply *BACK* to change the Pincode or Shop type."
+  select_timeslot: "You're almost done 😊\nHere's the list of available Time Slots for \n*%{shop_details}*\n\n%{slots}\n\nJust send us the Code to Book the Slot."
+  timeslot_error: "Uh-oh! It's quite unfortunate that this Slot is alredy Booked or an invalid Time Slot, please try again with Available Time Slot codes.\n\n%{slots}"
+  booking_successful: "Yay, Your slot is booked successfully 🎊🎉\n\nDetails:\n%{shop}\n%{slot_time}\nToken: *%{token_number}*\n\nWanna send direct message to booked service provider?\nJust reply *MSG <Token Number> <Your Message>*\n\nIf you want to cancel the booking simply reply\n*CANCEL <Token Number>* .\n\nWanna Book more? just reply *MENU*.\n\nHope to see you again! #StayFit #StayHealthy 😷 😁"
+  max_booking: "You're quite impressed with this %{type} 😊, but you've reached the maximum limit of booking for this %{type}!\nBut you can still book a slot for other %{type}.\nFor Main menu reply *MENU*."
+  service_representative: "*%{shop_name}* \n*Service Representative:* \n%{body}"
+
+  language:
+    invalid: "यह एक अमान्य भाषा की तरह लगता है.\nहिंदी के लिए *LANG HINDI* के साथ प्रयास करें.\n\nOops! Seems like an invalid Language\nPlease try again with LANG ENG for English."
+    changed: "Your language is been changed to English successfully.\nहिंदी में भाषा बदलने के लिए: LANG HINDI भेजे."
+  book:
+    shop_error: "Oops! Seems like an invalid Shop / Arena / Clinic / Bank Code, please try again OR simply type *MENU* to check available Services in your area."
+    invalid_command: "Ahh.. Please send Shop / Arena / Clinic / Bank Code along with BOOK command, example *BOOK <shop_code>*\nOR Simply type *MENU* to check available Servicess in your area."
+  otp_message: "One Time password for ShopTok - %{otp}"
+  errors:
+    invalid:
+      shop: Invalid shop!
+      time_slot: Invalid time slot!
+      invalid_token: Invalid Token!
+      cannot_cancel_token: Can not cancel token!
+    slot_full: Slot is already full!
+    max_booking: Maximum 1 booking, per day, per shop is allowed!
+
+  cancel:
+    error: 'Please enter your Token Number as well to proceed.\nExample: CANCEL S1-18K87'
+    invalid_code: 'Oops! Seems like an invalid token, please try to again.'
+    success: 'Your booking for %{details} has been cancelled successfully!'
+    cancelled_by_shop: 'Your booking with token number %{token_number} has been cancelled by %{shop_name}.'
+  
+  message:
+    invalid: "Sorry! This is not a valid message format. Please try agian with following format,\n*MSG <Token number> <Your Text Message>*."
+    empty: "Oops! Seems like an empty message. Please try again with a valid message."
+    success: "Yolo! Your message is been sent to the business representative successfully. 😊\nNow he may revert back to you."
