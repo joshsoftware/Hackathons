@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  contact_no: MyString
+  time_slot: 1
+  allowed_customers: 1
+  start_time: 2020-05-22 11:34:29
+  end_time: 2020-05-22 11:34:29
+  store_type: MyString
+  uuid: MyString
+  user: one
+
+two:
+  name: MyString
+  contact_no: MyString
+  time_slot: 1
+  allowed_customers: 1
+  start_time: 2020-05-22 11:34:29
+  end_time: 2020-05-22 11:34:29
+  store_type: MyString
+  uuid: MyString
+  user: two
