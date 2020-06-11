@@ -1,0 +1,3 @@
+# MINION
+
+Current DevOps systems are big, enterprise-oriented, and require learning a significant amount of DSL and setup before they can be installed and effectively used. Minion is an attempt to change that. With a simple execution agent running on the *nix (Linux is our first target) server in question that also gathers logs and system statistics then ships them to a configured dashboard provider, a DevOps engineer could operate an entire cluster of virtual machines from a simple dashboard from which they can also obtain logging information and execute system commands, then see their results in real time.
