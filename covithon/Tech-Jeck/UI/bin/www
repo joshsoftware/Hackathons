@@ -1,0 +1,13 @@
+#!/usr/bin/env node;
+var app = require('../app');
+var fs = require('fs');
+var http = require('http');
+require("dotenv").config("./.env")
+var contentsConfigjsFile = "var apiServer = " + "'" + process.env.API_SERVER + "'" + ";"
+fs.writeFileSync('./public/js/cabTab/config.js', contentsConfigjsFile);
+
+http.createServer(app).listen(process.env.UI_PORT || 3000);
+console.log('HTTP UI Port :' + process.env.UI_PORT || 3000);
+
+
+

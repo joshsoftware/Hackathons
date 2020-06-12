@@ -1,0 +1,67 @@
+version: '3'
+
+services:
+  nodejs:
+    build:
+      context: .
+      dockerfile: Dockerfile-UI
+    image: cabtab-ui:latest
+    container_name: cabtab-ui
+    restart: unless-stopped
+    env_file:
+      - ui-docker.env
+    links:
+      - cabtab-api
+    depends_on:
+      - cabtab-api
+    networks:
+      - app-network
+
+  webserver:
+    image: nginx:mainline-alpine
+    container_name: webserver
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - nodejs
+      - cabtab-api
+    networks:
+      - app-network
+
+  cabtab-api:
+    image: bhagyesh27/cabtab-api:latest
+    container_name: cabtab-api
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    env_file:
+      - api-docker.env
+    links:
+      - postgres
+    depends_on:
+      - postgres
+    networks:
+      - app-network
+
+  postgres:
+    image: postgres:11-alpine
+    container_name: postgres
+    volumes:
+      - db_data:/var/lib/postgresql
+    ports:
+      - "35432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    networks:
+      - app-network
+
+volumes:
+  db_data:
+
+networks:
+  app-network:
+    driver: bridge

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<%- include('header.html'); -%>
+<body>
+	<!-- begin #page-loader -->
+	<div id="page-loader" class="fade in"><span class="spinner"></span></div>
+	<!-- end #page-loader -->
+	
+	<!-- begin #page-container -->
+	<div id="page-container" class="fade page-sidebar-fixed page-header-fixed">
+		<!-- begin #header -->
+		<%- include('topbar.html') -%>
+		<!-- end #header -->
+		
+		<!-- begin #sidebar -->
+		<div class="sidebar-bg"></div>
+		<!-- end #sidebar -->
+		
+		<!-- begin #content -->
+		<div id="content" class="content">
+			<!-- begin page-header -->
+			<h1 class="page-header">500 Error Page </h1>
+			<!-- end page-header -->
+			<!-- begin row -->
+			<div class="row">
+				<!-- begin col-12 -->
+				<div class="col-md-12">
+					<!-- begin panel -->
+					<div class="panel panel-inverse" data-sortable-id="form-stuff-3">
+						<div class="panel-heading">
+							<h4 class="panel-title">500 error</h4>
+						</div>
+						<div class="panel-body">
+							<div class="error-page">
+								<h2 class="headline text-info"> 500</h2>
+								<h3><i class="fa fa-warning text-yellow"></i> Oops! Something went wrong.</h3>
+								<p>
+									We will work on fixing that right away. 
+									Meanwhile, you may <a href='/'>return to login</a>.
+								</p>
+
+							</div><!-- /.error-page -->  
+						</div>
+					</div>
+					<!-- end panel -->
+				</div>
+				<!-- end col-12 -->
+			</div>
+			<!-- end row -->
+			
+		</div>
+		<!-- end #content -->
+		
+
+		
+		<!-- begin scroll to top btn -->
+		<a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
+		<!-- end scroll to top btn -->
+	</div>
+	<!-- end page container -->
+	
+	<!-- ================== BEGIN BASE JS ================== -->
+	<%- include('footer.html') -%>
+	<script src="./js/cabTab/500.js"></script>
+	<!-- ================== END BASE JS ================== -->
+	
+</body>
+
+</html>

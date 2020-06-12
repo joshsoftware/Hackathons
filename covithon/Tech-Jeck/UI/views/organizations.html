@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<%- include('header.html'); -%>
+
+<body>
+	<!-- begin #page-loader -->
+	<div id="page-loader" class="fade in"><span class="spinner"></span></div>
+	<!-- end #page-loader -->
+	
+	<!-- begin #page-container -->
+	<div id="page-container" class="fade page-sidebar-fixed page-header-fixed">
+		<!-- begin #header -->
+		<%- include('topbar.html'); -%>
+		<!-- end #header -->
+		
+		<!-- begin #sidebar -->
+		<%- include('sidebar.html'); -%>
+		<!-- end #sidebar -->
+		
+		<!-- begin #content -->
+		<div id="content" class="content">
+			<!-- begin page-header -->
+			<h1 class="page-header">Organization <small>All Organizations List...</small></h1>
+			<!-- end page-header -->
+			<!-- begin row -->
+			<div class="row">
+				<!-- begin col-12 -->
+				<div class="col-md-12">
+					<!-- begin panel -->
+					<div class="panel panel-inverse" data-sortable-id="form-stuff-3">
+						<div class="panel-heading">
+							<div class="panel-heading-btn">
+								<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+								<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+							</div>
+							<h4 class="panel-title">Organizations</h4>
+						</div>
+						<div class="panel-body">
+							<form id="sitesForm" data-parsley-validate="true">
+
+								<div class="row">
+									<div class="addNew form-group col-md-12 text-right" id="divBtnNew">
+										<div class="marginBtn">
+											<a class="btn btn-success btn-sm" href="newOrg" id="btnNewOrg"><i class="fa fa-plus-square"></i> &nbsp; Add Organization</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="row">  
+									<div class="col-md-12 table-responsive" id="divAllOrg">
+										<table id="tblAllOrg" class="table table-striped table-bordered">
+											<thead>
+												<tr>
+													<th>#</th>
+													<th>Name</th>
+													<th>Email</th>
+													<th>Contact Number</th>
+													<th>Employee Count</th>
+													<th>No. of Cabs</th>
+													<th>Cab Service Type</th>
+													<!-- <th class="addNew">Action</th> -->
+												</tr>
+											</thead>
+											<tbody>
+
+											</tbody>
+										</table>
+									</div>                            
+								</div>
+							</form>
+						</div>
+					</div>
+					<!-- end panel -->
+				</div>
+				<!-- end col-12 -->
+			</div>
+			<!-- end row -->
+			
+		</div>
+		<!-- end #content -->
+		
+
+		
+		<!-- begin scroll to top btn -->
+		<a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
+		<!-- end scroll to top btn -->
+	</div>
+	<!-- end page container -->
+	
+	<!-- ================== BEGIN BASE JS ================== -->
+	<%- include('footer.html'); -%>
+	<!-- ================== END BASE JS ================== -->
+	
+	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+	<script>
+		$(document).ready(function () {
+			App.init();
+		});
+	</script>
+	<script src="./js/cabTab/sideBar.js"></script>
+	<!-- ================== END PAGE LEVEL JS ================== -->
+	
+	
+</body>
+
+</html>
+s

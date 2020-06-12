@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+  cabtab-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: cabtab-api
+    container_name: cabtab-api
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "3000:3000"
+    links:
+      - postgres
+    depends_on:
+      - postgres
+    networks:
+      - app-network
+
+  postgres:
+    image: postgres:11-alpine
+    container_name: postgres
+    volumes:
+      - db_data:/var/lib/postgresql
+    ports:
+      - "35432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    networks:
+      - app-network
+
+volumes:
+  db_data:
+
+networks:
+  app-network:
+    driver: bridge

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<%- include('header.html'); -%>
+<link href="./css/cabTab/login.css" rel="stylesheet" />
+<body class="pace-top">
+	<!-- begin #page-loader -->
+	<div id="page-loader" class="fade in"><span class="spinner"></span></div>
+	<!-- end #page-loader -->
+	
+	<!-- begin #page-container -->
+	<div id="page-container" class="fade">
+   <!-- begin login -->
+   <div class="login bg-black animated fadeInDown">
+    <!-- begin brand -->
+    <div class="login-header">
+      <div class="brand">
+        <!-- <span><img src="img/logo.png" style="width:22% !important"></img></span> -->
+        CabTab
+      </div>
+      <div class="icon">
+        <i class="fa fa-sign-in"></i>
+      </div>
+    </div>
+    <!-- end brand -->
+    <div class="login-content">
+      <form id="loginForm" data-parsley-validate="true">
+        <div id="divEmail" class="form-group m-b-20">
+          <input id="txtEmail" type="text" class="form-control input-lg" placeholder="Email Address" data-parsley-required="true" data-parsley-type="email" />
+        </div>
+        <div id="divPassword" class="form-group m-b-20">
+          <input type="password" id="txtPassword" class="form-control input-lg" placeholder="Password" data-parsley-required="true"/>
+        </div>
+        <div class="checkbox m-b-20">
+          <label class="whiteFont">
+            <input type="checkbox" id="chkRemember" /> Remember Me &nbsp; |<label style="padding-left: 10px;"><a href="#modal-dialog" class="whiteFont" data-toggle="modal"> Forgot Password</a></label>
+          </label>
+        </div>
+        <div class="login-buttons">
+          <button id="btnLogin" type="submit" class="btn btn-success btn-block btn-lg">Sign me in</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- end login -->
+
+  <!-- Modal -->
+  <div class="modal fade in" id="modal-dialog" aria-hidden="true" >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h4 class="modal-title">Forgot Password</h4>
+        </div>
+        <div class="modal-body">
+          <form class="form-horizontal" data-parsley-validate="true" id="forgotPwdForm">
+            <div class="form-group">
+              <label class="col-md-2 control-label ui-sortable">E-mail</label>
+              <div class="col-md-8 ui-sortable">
+                <input id="txtUserEmail" type="text" class="form-control" placeholder="Enter your email address" data-parsley-required="true" data-parsley-type="email">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-sm btn-white" data-dismiss="modal">Close</a>
+          <a id="btnSubmit" type="submit" class="btn btn-sm btn-success">Submit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal ends-->
+
+</div>
+<!-- end page container -->
+<%- include('footer.html'); -%>
+<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+<script src="./plugins/jquery/jquery.sha1.js"></script>
+<script src="./js/cabTab/login.js"></script>
+<!-- ================== END PAGE LEVEL JS ================== -->
+
+
+</body>
+
+<!-- Mirrored from seantheme.com/color-admin-v1.7/admin/html/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Apr 2015 11:01:45 GMT -->
+</html>
