@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="thanksViewModel"
+            type="com.example.shoptokapplication.viewmodel.ThanksScreenForQRViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.ThanksScreenForQRActivity">
+
+        <include
+            layout="@layout/app_toolbar"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/thankYouTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+
+            android:text="@string/text_thank_you"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/dimen_20sp" />
+
+        <TextView
+            android:id="@+id/qrCodeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/thankYouTextView"
+            android:layout_marginTop="48dp"
+            android:gravity="center"
+            android:text="@string/text_qr_code_info"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/dimen_20sp" />
+
+        <RelativeLayout
+            android:id="@+id/qrcodeRelative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/qrCodeImageView"
+                android:layout_width="@dimen/margin_200"
+                android:layout_height="@dimen/margin_200"
+                android:scaleType="fitXY" />
+
+            <ProgressBar
+                android:id="@+id/halfprogressBar"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/shareQRCodeRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/qrcodeRelative"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="40dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/shareImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_share" />
+
+            <TextView
+                android:id="@+id/shareQRCodeTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_26dp"
+                android:layout_toRightOf="@id/shareImageView"
+                android:text="@string/text_share_qr_code" />
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

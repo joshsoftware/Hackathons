@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="loginDataModel"
+            type="com.example.shoptokapplication.datamodel.LoginDataModel" />
+
+        <variable
+            name="loginViewModel"
+            type="com.example.shoptokapplication.viewmodel.LoginViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/app_toolbar"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/appLogoImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_60dp"
+            android:src="@mipmap/app_logo_new"
+            android:layout_centerHorizontal="true"/>
+
+        <EditText
+            android:id="@+id/userMobileNoEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/appLogoImageView"
+            android:layout_marginLeft="@dimen/dimen_26dp"
+            android:layout_marginTop="@dimen/margin_60dp"
+            android:layout_marginRight="@dimen/dimen_26dp"
+            android:background="@drawable/drawable_mobile_no_background"
+            android:hint="@string/hint_mobile_no"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:padding="@dimen/padding_10dp"
+            android:singleLine="true"
+            android:text="@={loginDataModel.phoneNo}" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userMobileNoEditText"
+            android:layout_marginStart="@dimen/dimen_30dp"
+            android:layout_marginTop="@dimen/dimen_30dp"
+            android:layout_marginEnd="@dimen/dimen_30dp"
+            android:onClick="@{()->loginViewModel.getOtp(loginDataModel)}"
+            android:text="@string/text_get_otp"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/colorWhite"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:elevation="@dimen/dimen_10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <FrameLayout
+                android:id="@+id/frameBottomSheet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:background="@android:color/transparent"
+                android:elevation="14dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <include layout="@layout/otp_bottom_sheet" />
+            </FrameLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+</layout>

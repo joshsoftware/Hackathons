@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="customerOptionsViewModel"
+            type="com.example.shoptokapplication.viewmodel.CustomerOptionsViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/app_toolbar" />
+
+        <LinearLayout
+            android:id="@+id/linearbuttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/margin_20"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/showShopsButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_weight="1"
+                android:background="@drawable/drawable_mobile_no_background"
+                android:shadowRadius="4"
+                android:text="@string/text_show_listing" />
+
+            <Button
+                android:id="@+id/openScannerButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_weight="1"
+                android:background="@drawable/drawable_mobile_no_background"
+                android:text="@string/text_open_scanner" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/logoutBotton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearbuttons"
+            android:layout_marginLeft="@dimen/dimen_20dp"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:background="@drawable/drawable_mobile_no_background"
+            android:text="Logout" />
+
+    </RelativeLayout>
+</layout>

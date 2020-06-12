@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_12"
+    app:cardCornerRadius="@dimen/margin_12"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_12"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:text="Shop Address"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/textSize_16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:maxLines="1"
+            android:text="Area"
+            android:textSize="@dimen/dimen_14sp" />
+
+        <EditText
+            android:id="@+id/editTextArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enten Area"
+            android:text="@={registrationDataModel.addressAttributes.area}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:text="City"
+            android:textSize="@dimen/dimen_14sp" />
+
+        <EditText
+            android:id="@+id/editTextSelectCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enten City"
+            android:maxLines="1"
+            android:text="@={registrationDataModel.addressAttributes.city}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:text="State"
+            android:textSize="@dimen/dimen_14sp" />
+
+        <EditText
+            android:id="@+id/editTextSelectState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter State"
+            android:text="@={registrationDataModel.addressAttributes.state}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:text="Country"
+            android:textSize="@dimen/dimen_14sp" />
+
+        <EditText
+            android:id="@+id/editTextSelectCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Country"
+            android:text="@={registrationDataModel.addressAttributes.country}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:maxLines="1"
+            android:text="Pincode"
+            android:textSize="@dimen/dimen_14sp" />
+
+        <EditText
+            android:id="@+id/editTextPincode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="1234567890"
+            android:hint="Enten Pincode"
+            android:inputType="number"
+            android:maxLength="6"
+            android:maxLines="1"
+            android:text="@={registrationDataModel.addressAttributes.pincode}" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

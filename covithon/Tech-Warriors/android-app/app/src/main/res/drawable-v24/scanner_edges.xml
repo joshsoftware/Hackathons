@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <size android:width="@dimen/margin_200" android:height="@dimen/margin_200"/>
+        </shape>
+    </item>
+    <item android:bottom="@dimen/margin_196" android:right="@dimen/margin_170">
+        <!--hlt-->
+        <shape android:shape="rectangle">
+            <solid android:color="@color/edges"></solid>
+        </shape>
+    </item>
+    <item android:left="@dimen/margin_170" android:bottom="@dimen/margin_196">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/edges"></solid>
+        </shape>
+    </item>
+    <item android:left="@dimen/margin_170" android:top="@dimen/margin_196">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/edges"></solid>
+        </shape>
+    </item>
+    <item android:top="@dimen/margin_196" android:right="@dimen/margin_170">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/edges"></solid>
+        </shape>
+    </item>
+    <item android:left="@dimen/margin_196"
+          android:bottom="@dimen/margin_170" >
+        <shape android:shape="rectangle">
+            <solid android:color="@color/edges"></solid>
+        </shape>
+    </item>
+    <item android:bottom="@dimen/margin_170"
+          android:right="@dimen/margin_196">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/edges"></solid>
+        </shape>
+    </item>
+    <item android:top="@dimen/margin_170"
+          android:right="@dimen/margin_196">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/edges"></solid>
+        </shape>
+    </item>
+    <item android:left="@dimen/margin_196" android:top="@dimen/margin_170">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/edges"></solid>
+        </shape>
+    </item>
+
+</layer-list>

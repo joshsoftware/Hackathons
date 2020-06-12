@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="splashViewModel"
+            type="com.example.shoptokapplication.viewmodel.SplashViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        tools:context=".ui.splash.SplashActivity">
+
+        <ImageView
+            android:id="@+id/appLogoImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:layout_above="@id/textView"
+            android:layout_marginTop="@dimen/dimen_60dp"
+            android:src="@mipmap/app_logo_splash"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/colorWhite"
+            android:text="@string/text_splash_name"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            />
+    </RelativeLayout>
+
+</layout>

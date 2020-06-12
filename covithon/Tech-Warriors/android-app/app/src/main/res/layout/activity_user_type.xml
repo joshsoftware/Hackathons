@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="customerOptionsViewModel"
+            type="com.example.shoptokapplication.viewmodel.CustomerOptionsViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/app_toolbar" />
+
+        <Button
+            android:id="@+id/customerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/dimen_20dp"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:layout_marginBottom="@dimen/margin_20"
+            android:background="@drawable/drawable_mobile_no_background"
+            android:shadowRadius="4"
+            android:text="Customer" />
+
+        <Button
+            android:id="@+id/storeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/customerButton"
+            android:layout_marginLeft="@dimen/dimen_20dp"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:layout_marginBottom="@dimen/margin_20"
+            android:background="@drawable/drawable_mobile_no_background"
+            android:text="Store Owner" />
+
+    </RelativeLayout>
+</layout>

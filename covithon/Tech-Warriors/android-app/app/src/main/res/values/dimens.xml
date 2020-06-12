@@ -1,0 +1,32 @@
+<resources>
+    <dimen name="dimen_10dp">10dp</dimen>
+    <dimen name="dimen_26dp">26dp</dimen>
+    <dimen name="margin_60dp">60dp</dimen>
+    <dimen name="padding_10dp">10dp</dimen>
+    <dimen name="dimen_14sp">14sp</dimen>
+    <dimen name="dimen_16sp">16sp</dimen>
+    <dimen name="dimen_15sp">15sp</dimen>
+    <dimen name="dimen_20dp">20dp</dimen>
+    <dimen name="dimen_30dp">30dp</dimen>
+    <dimen name="dimen_40dp">40dp</dimen>
+    <dimen name="dimen_50dp">50dp</dimen>
+    <dimen name="dimen_60dp">60dp</dimen>
+    <dimen name="dimen_80dp">80dp</dimen>
+    <dimen name="dimen_100dp">100dp</dimen>
+    <dimen name="dimen_120dp">120dp</dimen>
+    <dimen name="textSize_14">14sp</dimen>
+    <dimen name="margin_4">4dp</dimen>
+    <dimen name="margin_196">196dp</dimen>
+    <dimen name="margin_170">170dp</dimen>
+    <dimen name="margin_200">200dp</dimen>
+    <dimen name="dimen_15dp">15dp</dimen>
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_12">12dp</dimen>
+    <dimen name="margin_2">2dp</dimen>
+    <dimen name="textSize_20">20sp</dimen>
+    <dimen name="textSize_16">16sp</dimen>
+    <dimen name="dimen_20sp">20sp</dimen>
+    <dimen name="marginc_4">4dp</dimen>
+
+</resources>

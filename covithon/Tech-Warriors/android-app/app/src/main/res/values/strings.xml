@@ -1,0 +1,23 @@
+<resources>
+
+    <!-- Screen Names -->
+    <string name="text_login_screen_name">Login</string>
+    <string name="text_shop_listing_screen_name">Shop Listing</string>
+    <string name="text_customer_booking_screen_name">Confirm Booking</string>
+    <string name="text_customer_options_screen_name">Your Options</string>
+    <string name="text_home_screen_name">Home Screen</string>
+
+
+    <string name="app_name">ShopTokApplication</string>
+    <string name="hint_mobile_no">Enter Mobile No.</string>
+    <string name="text_get_otp">Get OTP</string>
+    <string name="otp_will_expire_after_15_mins">OTP will expire after 15 mins</string>
+    <string name="title_activity_splashscreen">SplashscreenActivity</string>
+    <string name="text_splash_name">ShopTok</string>
+    <string name="text_show_listing">Show All Shops</string>
+    <string name="text_open_scanner">QR Code Scanner</string>
+    <string name="continue_tag">Continue</string>
+    <string name="text_thank_you">Thank You!</string>
+    <string name="text_qr_code_info">Share this QR code with \n your customers to scan \n generate e-Token \n for your shop!</string>
+    <string name="text_share_qr_code">Share QR Code</string>
+</resources>

@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="registrationViewModel"
+            type="com.example.shoptokapplication.viewmodel.RegistrationViewModel" />
+
+        <variable
+            name="registrationDataModel"
+            type="com.example.shoptokapplication.datamodel.RegistrationDataModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:context=".activity.RegistrationActivity">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_12"
+                    app:cardCornerRadius="@dimen/margin_12"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/margin_12"
+                            android:background="@color/colorPrimaryDark"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:text="Shop Details"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/textSize_16"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textViewShopName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:text="Shop Name"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/dimen_14sp" />
+
+                        <EditText
+                            android:id="@+id/editTextShopName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:layout_marginRight="@dimen/margin_8"
+                            android:hint="Enten shop name"
+                            android:text="@={registrationDataModel.store.shopName}" />
+
+                        <TextView
+                            android:id="@+id/textViewContactNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_marginRight="@dimen/margin_8"
+                            android:text="Contact Number"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/dimen_14sp" />
+
+                        <EditText
+                            android:id="@+id/editTextContactNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:layout_marginRight="@dimen/margin_8"
+                            android:hint="Enten contact number"
+                            android:inputType="phone"
+                            android:maxLength="10"
+                            android:text="@={registrationDataModel.store.contactNo}" />
+
+                        <TextView
+                            android:id="@+id/textViewShopType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_marginRight="@dimen/margin_8"
+                            android:text="Shop Type"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/dimen_14sp" />
+
+                        <EditText
+                            android:id="@+id/editTextShopType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:layout_marginRight="@dimen/margin_8"
+                            android:hint="Enter shop type"
+                            android:text="@={registrationDataModel.store.storeType}" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_marginRight="@dimen/margin_8"
+                            android:text="Number of customer Allowed"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/dimen_14sp" />
+
+                        <EditText
+                            android:id="@+id/editTextCustomerAllowed"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:layout_marginRight="@dimen/margin_8"
+                            android:digits="1234567890"
+                            android:hint="Enter customer allowed"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:text="@={registrationDataModel.store.allowedCustomers}" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="@dimen/margin_8"
+                            android:layout_weight="1"
+                            android:text="Time slot interval in Minutes "
+                            android:textColor="@color/colorBlack" />
+
+                        <EditText
+                            android:id="@+id/spinnerTimeSlot"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:layout_marginRight="@dimen/margin_8"
+                            android:layout_weight="1"
+                            android:hint="Enter time Slot (mins)"
+                            android:inputType="number"
+                            android:text="@={registrationDataModel.store.timeSlots}" />
+
+                        <LinearLayout
+                            android:id="@+id/linearStartTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_marginRight="@dimen/margin_8"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Select Opening Time"
+                                android:textColor="@color/colorBlack" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_timer" />
+
+                            <TextView
+                                android:id="@+id/startTime"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@={registrationDataModel.store.start_time}" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearEndTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_marginRight="@dimen/margin_8"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Select Closing Time"
+                                android:textColor="@color/colorBlack" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_timer" />
+
+                            <TextView
+                                android:id="@+id/endTime"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@={registrationDataModel.store.end_time}" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_12"
+                    app:cardCornerRadius="@dimen/margin_12"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimaryDark"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:text="Shop Address"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/textSize_16"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textViewArea"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_marginRight="@dimen/margin_8"
+                            android:maxLines="1"
+                            android:text="Area"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/dimen_14sp" />
+
+                        <EditText
+                            android:id="@+id/editTextArea"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:layout_marginRight="@dimen/margin_8"
+                            android:hint="Enter Area"
+                            android:text="@={registrationDataModel.store.addressAttributes.area}" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_marginRight="@dimen/margin_8"
+                            android:text="City"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/dimen_14sp" />
+
+                        <EditText
+                            android:id="@+id/editTextSelectCity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:layout_marginRight="@dimen/margin_8"
+                            android:hint="Enter City"
+                            android:maxLines="1"
+                            android:text="@={registrationDataModel.store.addressAttributes.city}" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_marginRight="@dimen/margin_8"
+                            android:text="State"
+                            android:textSize="@dimen/dimen_14sp" />
+
+                        <EditText
+                            android:id="@+id/editTextSelectState"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:layout_marginRight="@dimen/margin_8"
+                            android:hint="Enter State"
+                            android:text="@={registrationDataModel.store.addressAttributes.state}" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_marginRight="@dimen/margin_8"
+                            android:text="Country"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/dimen_14sp" />
+
+                        <EditText
+                            android:id="@+id/editTextSelectCountry"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:layout_marginRight="@dimen/margin_8"
+                            android:hint="Enter Country"
+                            android:text="@={registrationDataModel.store.addressAttributes.country}" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_marginRight="@dimen/margin_8"
+                            android:maxLines="1"
+                            android:text="Pincode"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/dimen_14sp" />
+
+                        <EditText
+                            android:id="@+id/editTextPincode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:layout_marginRight="@dimen/margin_8"
+                            android:digits="1234567890"
+                            android:hint="Enter Pincode"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:maxLines="1"
+                            android:text="@={registrationDataModel.store.addressAttributes.pincode}"
+                            android:textColor="@color/colorBlack" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:id="@+id/submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_30dp"
+                    android:layout_marginRight="@dimen/dimen_30dp"
+                    android:onClick="@{()->registrationViewModel.registrationShopRequestCall(registrationDataModel)}"
+                    android:text="Submit"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginBottom="@dimen/dimen_10dp"
+                    android:background="@color/colorPrimaryDark"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

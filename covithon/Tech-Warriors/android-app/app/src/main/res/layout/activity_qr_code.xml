@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="qrCodeViewModel"
+            type="com.example.shoptokapplication.viewmodel.QrcodeViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_toolbar" />
+
+        <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/black">
+
+            </FrameLayout>
+
+            <info.androidhive.barcode.ScannerOverlay
+                android:id="@+id/scannerOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#44000000"
+                app:line_color="#CC0001"
+                app:line_speed="5"
+                app:line_width="4"
+                app:square_height="200"
+                app:square_width="200" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvNotification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="@dimen/margin_4"
+                android:layout_marginRight="4dp"
+                android:background="@color/colorWhite"
+                android:elevation="4dp"
+                android:padding="@dimen/margin_4"
+                android:visibility="gone"
+                app:cardCornerRadius="@dimen/margin_4" />
+
+            <RelativeLayout
+                android:id="@+id/box"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_centerInParent="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/scanner_edges" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

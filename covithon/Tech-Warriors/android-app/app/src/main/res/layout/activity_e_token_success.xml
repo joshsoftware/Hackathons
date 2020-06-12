@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="etokeSuccessViewModel"
+            type="com.example.shoptokapplication.viewmodel.ETokenSuccessViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/app_toolbar"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/mainRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_80dp">
+
+            <ImageView
+                android:id="@+id/successImageView"
+                android:layout_width="@dimen/dimen_120dp"
+                android:layout_height="@dimen/dimen_120dp"
+                android:src="@drawable/ic_green_tick"
+                android:layout_centerHorizontal="true"
+                 />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/mainRelativeLayout">
+
+            <TextView
+                android:id="@+id/tokenTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:layout_marginTop="@dimen/dimen_40dp"
+                android:gravity="center"
+                android:padding="@dimen/dimen_10dp"
+
+                android:textSize="@dimen/dimen_20sp"
+                android:textStyle="bold"
+                tools:text="Your Token : 456TZ857" />
+
+            <TextView
+                android:id="@+id/timeSLotTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tokenTextView"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:gravity="center"
+                android:padding="@dimen/dimen_10dp"
+                android:textSize="@dimen/dimen_20sp"
+                tools:text="Time Slot : 10.00" />
+
+            <Button
+                android:id="@+id/backToHomeButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/timeSLotTextView"
+                android:layout_marginTop="@dimen/dimen_50dp"
+                android:layout_marginStart="@dimen/dimen_30dp"
+                android:layout_marginLeft="@dimen/dimen_30dp"
+                android:layout_marginEnd="@dimen/dimen_30dp"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/colorWhite"
+                android:text="Back To Home"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    </layout>
