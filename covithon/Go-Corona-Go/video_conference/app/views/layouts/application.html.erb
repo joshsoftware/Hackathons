@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>VideoConference</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src='https://meet.jit.si/external_api.js'></script>
+  </head>
+  <body>
+    <nav class='navbar navbar-light nav-bar-color'>
+      <img src='/assets/Josh_logo.png' alt='company logo' width='155px'>
+      <a class='navbar-brand text-white' href='/companies/sign_in'> Video Conference</a>
+      <% if company_signed_in? %>
+        <%= link_to 'Logout', destroy_company_session_path, method: :delete, class: 'navbar-brand text-white' %>
+      <% end %>
+    </nav>
+    <%= yield %>
+  </body>
+</html>

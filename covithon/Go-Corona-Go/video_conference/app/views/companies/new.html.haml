@@ -1,0 +1,38 @@
+%body.body-class
+  %center
+    #login.pt-5
+      .container
+        #login-row.row.justify-content-center.align-items-center
+          #login-column.col-md-6
+            #login-box.col-md-8
+              = semantic_form_for(@company, method: :post, url: company_registration_path )do |f|
+                %h3.text-center.text-white
+                  %b Create Account
+                %br
+                  .form-group
+                    .col.s12
+                      %input#name.form-control{:name => "company[name]", :placeholder => " Company Name", :required => "", :type => "text"}/
+                    %br
+                    .col.s12
+                      = f.email_field :email, autofocus: true, autocomplete: "email", id: 'username', class: 'form-control', placeholder: 'Email'
+                  .form-group
+                    .col.s12
+                      = f.password_field :password, autocomplete: "current-password", id: 'password', class: 'form-control', placeholder: 'Password'
+                    %br
+                    .col.s12
+                      = f.password_field :password_confirmation, id: 'password', class: 'form-control', :placeholder => "Confirm Password"
+                      %br
+
+                  .subscriptions
+                    %h5.text-center.text-white Select Subscription Type:
+                    = f.semantic_fields_for :subscriptions do |a|
+                      .form-group
+                        .col.s12
+                          %select.form-control{name: "subscriptions_attributes[type]"}
+                            %option Gold
+                            %option Silver
+                            %option Bronze
+
+                      .actions.text-center
+                        = f.submit 'Submit', class: "btn btn-primary"
+                        = link_to "Back", new_company_session_path, :class=> "btn btn-success"

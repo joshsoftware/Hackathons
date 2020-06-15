@@ -1,0 +1,27 @@
+%body.body-class
+  %center
+    #login
+      %h3.text-center.text-white.pt-5
+        %b.login-bold.dark Login
+      .container
+        #login-row.row.justify-content-center.align-items-center
+          #login-column.col-md-6
+            #login-box.col-md-8
+              = form_for(resource, as: resource_name, url: session_path(resource_name), id: 'login-form' ) do |f|
+                %br
+                .form-group
+                  = f.email_field :email, autofocus: true, autocomplete: "email", id: 'username', class: 'form-control', placeholder: 'Email'
+                .form-group
+                  = f.password_field :password, autocomplete: "current-password", id: 'password', class: 'form-control', placeholder: 'Password'
+                .form-group
+                  - if devise_mapping.rememberable?
+                    .field
+                      = f.check_box :remember_me, id: 'remember-me'
+                      = f.label :remember_me, class: 'text-info'
+                  .actions.text-center
+                    = f.submit "Log in", class: 'btn btn-primary'
+                    = link_to 'Register here', new_company_registration_path, class: 'btn btn-success'
+  #information-text
+    %p
+      %b Josh Software video conferencing
+      %span.powered-by powered by jitsi

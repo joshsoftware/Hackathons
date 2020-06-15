@@ -1,0 +1,65 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+
+ @import "bootstrap";
+
+.nav-bar-color {
+  background-color:	#0197D2;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+#login .container #login-row #login-column #login-box #login-form {
+  padding: 20px;
+}
+#login .container #login-row #login-column #login-box #login-form #register-link {
+  margin-top: -85px;
+}
+
+#login {
+  max-width: 100%;
+  height: auto;
+}
+
+#meet {
+  text-align: center;
+}
+
+.body-class {
+  background: linear-gradient(360deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 50%), url('Background_image.jpg');
+  background-size: cover;
+  .nav-bar-color {
+    background-color: transparent;
+  }
+
+}
+
+#information-text {
+  color: #ffffff;
+  max-width: 100%;
+  height: auto;
+  margin-top: 120px;
+  margin-right: -150px;
+  text-align: center;
+  p {
+    font-size: 1.6em;
+  }
+  .powered-by {
+    font-size: 0.5em;
+  }
+}

@@ -1,0 +1,11 @@
+%br
+
+#meet
+
+:javascript
+  $(document).ready(function() {
+    var name = "#{params['company']['name']}"
+    var email = "#{params['company']['email']}"
+    var password = "#{params['company']['password']}"
+    getMeetingDetails(name, email, password);
+  });

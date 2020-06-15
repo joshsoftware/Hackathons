@@ -1,0 +1,35 @@
+%br
+%br
+%section.main-content
+  .container
+    %br
+    %h2.text-center Start Meeting
+    %br
+    = form_tag(company_path(current_company.id), method: :get) do
+      %input{ :type => "hidden", :name => 'company[email]', value: current_company.email}
+      %table.table
+        %tbody
+          %tr
+            .form-group
+              %th.text-center{:scope => "row"}
+                %label{:for => "meetingName"} Email
+              %td
+                %input#meetingEmail.form-control{ :type => "text", disabled: true, value: current_company.email}
+
+          %tr
+            .form-group
+              %th.text-center{:scope => "row"}
+                %label{:for => "meetingName"} Name
+              %td
+                %input#meetingName.form-control{:placeholder => "Meeting Name", :type => "text", :name => 'company[name]'}
+          %tr
+            .form-group
+              %th.text-center{:scope => "row"}
+                %label{:for => "meetingPassword"} Password
+              %td
+                %input#meetingPassword.form-control{:placeholder => "Meeting Password", :type => "password", :name => 'company[password]'}
+
+          %tr
+            %td.text-center{:colspan => "2"}
+              %button.btn.btn-primary{:type => "submit"} Start
+              %button.btn.btn-primary{:type => "submit"} Join
