@@ -1,0 +1,55 @@
+{
+  "main": "index.js",
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "web": "expo start --web",
+    "start": "react-native start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@react-native-community/datetimepicker": "^2.4.0",
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-navigation/native": "^5.4.2",
+    "@react-navigation/stack": "^5.3.9",
+    "expo": "^37.0.11",
+    "expo-font": "^8.1.1",
+    "expo-splash-screen": "^0.2.3",
+    "expo-updates": "~0.2.0",
+    "react": "~16.9.0",
+    "react-dom": "~16.9.0",
+    "react-native": "~0.61.5",
+    "react-native-dotenv": "^0.2.0",
+    "react-native-elements": "^2.0.0",
+    "react-native-flexbox-grid": "^0.3.2",
+    "react-native-gesture-handler": "^1.6.1",
+    "react-native-gifted-chat": "^0.16.1",
+    "react-native-loading-spinner-overlay": "^1.1.0",
+    "react-native-material-buttons": "^0.6.0",
+    "react-native-material-dropdown": "^0.11.1",
+    "react-native-material-textfield": "^0.16.1",
+    "react-native-modal-datetime-picker": "^8.7.0",
+    "react-native-responsive-screen": "^1.4.1",
+    "react-native-safe-area-context": "^1.0.2",
+    "react-native-screens": "^2.7.0",
+    "react-native-side-menu": "^1.1.3",
+    "react-native-unimodules": "~0.9.0",
+    "react-native-vector-icons": "^6.6.0",
+    "react-native-web": "~0.11.7",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-saga": "^1.1.3",
+    "yup": "^0.29.0"
+  },
+  "devDependencies": {
+    "@babel/core": "~7.9.0",
+    "babel-jest": "~25.2.6",
+    "jest": "~25.2.6",
+    "react-test-renderer": "~16.9.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "private": true
+}
