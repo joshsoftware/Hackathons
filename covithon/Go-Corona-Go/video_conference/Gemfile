@@ -34,7 +34,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
 gem "haml-rails", '~> 2.0'
-gem 'devise', '4.7.0'
+gem 'devise', '4.7.1'
 gem 'cocoon'
 gem 'formtastic', '~> 3.0'
 # Use Capistrano for deployment
