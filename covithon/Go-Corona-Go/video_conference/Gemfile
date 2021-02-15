@@ -31,7 +31,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem "haml-rails", '~> 2.0'
 gem 'devise', '4.7.0'
